@@ -9,11 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        label.isHidden = true
+        button.backgroundColor = .systemGray5
+        button.setTitle("Push", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        
     }
 
-
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        label.isHidden = false
+        label.text = "Hello!"
+        
+        
+        
+    }
+    
 }
 
